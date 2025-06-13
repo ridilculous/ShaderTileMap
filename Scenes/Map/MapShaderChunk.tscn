@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://b3kf1qe5ejjwh"]
 
 [ext_resource type="Texture2D" uid="uid://ci353ic6tyram" path="res://icon.png" id="1"]
-[ext_resource type="Shader" path="res://Shaders/MapRenderer.gdshader" id="2"]
-[ext_resource type="Script" path="res://Scripts/MapShaderRenderer/MapShaderChunk.cs" id="3"]
+[ext_resource type="Script" uid="uid://drakb0eqr8vl6" path="res://Scripts/MapShaderRenderer/MapShaderChunk.gd" id="1_o6pyu"]
+[ext_resource type="Shader" uid="uid://cftcewqo37pru" path="res://Shaders/MapRenderer.gdshader" id="2"]
 
 [sub_resource type="ShaderMaterial" id="1"]
 resource_local_to_scene = true
@@ -17,7 +17,7 @@ shader_parameter/blendTextureTiles = 16.0
 shader_parameter/blend = true
 
 [node name="MapShaderChunk" type="Node2D"]
-script = ExtResource("3")
+script = ExtResource("1_o6pyu")
 
 [node name="MapRenderer" type="Sprite2D" parent="."]
 texture_filter = 1
